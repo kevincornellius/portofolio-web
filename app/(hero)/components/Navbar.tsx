@@ -9,6 +9,11 @@ import {
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import PatrickStar from "../../../components/assets/patrick-star.jpg";
+import { FaGithub } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+
 // function Navbar() {
 //   return (
 //     // <div className="py-8 min-h-screen">
@@ -24,26 +29,46 @@ function Navbar() {
   return (
     <div
       className={cn(
-        "fixed top-10 inset-x-0 max-w-lg mx-auto z-50 border rounded-full flex justify-evenly bg-white"
+        "fixed top-10 inset-x-0 max-w-sm sm:max-w-lg  mx-auto z-50 border rounded-full flex justify-evenly bg-white"
       )}
     >
       <Menu setActive={setActive}>
-        <div className="mr-20">
+        <div className="mr-5 sm:mr-20">
           <MenuItem
             setActive={setActive}
             active={active}
             item="Kevin Cornellius"
           >
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">Instagram</HoveredLink>
-              <HoveredLink href="/interface-design">Github</HoveredLink>
-              <HoveredLink href="/seo">LinkedIn</HoveredLink>
-              <HoveredLink href="/branding">Discord</HoveredLink>
+            <div className="flex flex-col space-y-4 text-sm items-start">
+              <HoveredLink href="/web-dev">
+                <div className="mr-1">
+                  <AiFillInstagram />
+                </div>
+                Instagram
+              </HoveredLink>
+              <HoveredLink href="/interface-design">
+                <div className="mr-1">
+                  <FaGithub />
+                </div>
+                Github
+              </HoveredLink>
+              <HoveredLink href="/seo">
+                <div className="mr-1">
+                  <FaLinkedinIn />{" "}
+                </div>{" "}
+                LinkedIn
+              </HoveredLink>
+              <HoveredLink href="/branding">
+                <div className="mr-1">
+                  <FaDiscord />{" "}
+                </div>
+                Discord
+              </HoveredLink>
             </div>
           </MenuItem>
-        </div>{" "}
+        </div>
         <MenuItem setActive={setActive} active={active} item="Projects">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+          <div className="  grid grid-cols-1 gap-10 p-4)">
             <ProductItem
               title="Algochurn"
               href="https://algochurn.com"

@@ -28,7 +28,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer  text-black hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:z-0	 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-amber-300 before:absolute before:left-0 before:-bottom-2 dark:text-white font-bold"
+        className="cursor-pointer  text-sm sm:text-lg text-black hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:z-0	 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-amber-300 before:absolute before:left-0 before:-bottom-2 dark:text-white font-bold"
       >
         {item}
       </motion.p>
@@ -89,19 +89,19 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
+    <Link href={href} className=" flex flex-col sm:flex-row space-x-2">
       <Image
         src={src}
         width={140}
         height={70}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
+        className="flex-shrink-0 rounded-md mx-auto sm:mx-0 sm:shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-lg sm:text-xl py-2 text-center sm:text-left sm:mx-0 sm:py-0 font-bold mb-1 text-black dark:text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-700 mx-auto text-center sm:text-left  sm:mx-0 sm:text-sm max-w-[10rem] dark:text-neutral-300">
           {description}
         </p>
       </div>
@@ -113,7 +113,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className="text-neutral-700 dark:text-neutral-200 hover:text-black flex justify-between items-center"
     >
       {children}
     </Link>
