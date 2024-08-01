@@ -72,9 +72,9 @@ export const FlipWords = ({
               delay: index * 0.08,
               duration: 0.4,
             }}
-            className="pr-2"
+            className=""
           >
-            {letter}
+            {letter}{" "}
           </motion.span>
         ))}
       </motion.div>

@@ -54,13 +54,13 @@ function Navbar() {
               </HoveredLink>
               <HoveredLink href="/seo">
                 <div className="mr-1">
-                  <FaLinkedinIn />{" "}
-                </div>{" "}
+                  <FaLinkedinIn />
+                </div>
                 LinkedIn
               </HoveredLink>
               <HoveredLink href="/branding">
                 <div className="mr-1">
-                  <FaDiscord />{" "}
+                  <FaDiscord />
                 </div>
                 Discord
               </HoveredLink>

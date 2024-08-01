@@ -15,7 +15,7 @@ function About() {
     "Web Developer",
   ];
   return (
-    <div className="min-h-screen">
+    <div className="min-h-full  mb-32">
       <h1 className="font-black text-4xl sm:text-7xl">Kevin Cornellius</h1>
       <FlipWords
         className="font-medium text-xl sm:text-4xl mt-3"
