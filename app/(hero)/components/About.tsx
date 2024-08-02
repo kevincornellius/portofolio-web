@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
+import PatrickStar from "../../../components/assets/patrick-star.jpg";
 
 function About() {
   const words = [
@@ -22,7 +23,7 @@ function About() {
         words={words}
       />
       <br />
-      <p className="pt-10">
+      <p className="pt-10 ">
         Hi, my name is
         <span className="font-bold"> Kevin Cornellius Widjaja! </span> I was
         born in <span className="font-bold">2006</span> and have a strong

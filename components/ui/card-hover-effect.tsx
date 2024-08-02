@@ -58,12 +58,12 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card>
+          <Card className="">
             <CardImage src={item.image} alt={item.title} />
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
             <CardIcons icons={item.icons} />
-            <div className="flex justify-between pt-8">
+            <div className="flex justify-between pt-6 ">
               <button className=" z-10 px-6 py-2  bg-opacity-0 border-2 border-amber-300 bg-white transition-colors duration-500 ease-in-out hover:bg-amber-300 text-black font-bold rounded-xl  text-xs sm:text-sm">
                 Demo
               </button>

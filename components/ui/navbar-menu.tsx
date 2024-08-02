@@ -89,11 +89,15 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className=" flex flex-col sm:flex-row space-x-2">
+    <Link
+      href={href}
+      target="_blank"
+      className=" flex flex-col sm:flex-row space-x-2"
+    >
       <Image
         src={src}
         width={140}
-        height={70}
+        height={50}
         alt={title}
         className="flex-shrink-0 rounded-md mx-auto sm:mx-0 sm:shadow-2xl"
       />
@@ -113,6 +117,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
+      target="_blank"
       className="text-neutral-700 dark:text-neutral-200 hover:text-black flex justify-between items-center"
     >
       {children}

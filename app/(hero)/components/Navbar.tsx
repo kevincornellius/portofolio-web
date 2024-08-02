@@ -8,7 +8,8 @@ import {
 } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
-import PatrickStar from "../../../components/assets/patrick-star.jpg";
+import beautyWeb from "../../../components/assets/beautyweb.png";
+import mern from "../../../components/assets/mern.png";
 import { FaGithub } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -40,25 +41,25 @@ function Navbar() {
             item="Kevin Cornellius"
           >
             <div className="flex flex-col space-y-4 text-sm items-start">
-              <HoveredLink href="/web-dev">
+              <HoveredLink href="https://www.instagram.com/kevin_cornelliuss/">
                 <div className="mr-1">
                   <AiFillInstagram />
                 </div>
                 Instagram
               </HoveredLink>
-              <HoveredLink href="/interface-design">
+              <HoveredLink href="https://github.com/kevincornellius">
                 <div className="mr-1">
                   <FaGithub />
                 </div>
                 Github
               </HoveredLink>
-              <HoveredLink href="/seo">
+              <HoveredLink href="https://www.linkedin.com/in/kevincornellius/">
                 <div className="mr-1">
                   <FaLinkedinIn />
                 </div>
                 LinkedIn
               </HoveredLink>
-              <HoveredLink href="/branding">
+              <HoveredLink href="https://discord.com/users/324513234604523530">
                 <div className="mr-1">
                   <FaDiscord />
                 </div>
@@ -70,16 +71,16 @@ function Navbar() {
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="  grid grid-cols-1 gap-10 p-4)">
             <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src={PatrickStar.src}
-              description="Prepare for tech interviews like never before."
+              title="Beauty Frontend Landing Page"
+              href="https://beauty-website-demo.web.app/"
+              src={beautyWeb.src}
+              description=" Made With React Javascript"
             />
             <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src={PatrickStar.src}
-              description="Production ready Tailwind css components for your next project"
+              title="MERN E-Commerce Page"
+              href="https://ecommerceweb-frontend.vercel.app/"
+              src={mern.src}
+              description="Integrated with Stripe and Cloudinary"
             />
           </div>
         </MenuItem>
