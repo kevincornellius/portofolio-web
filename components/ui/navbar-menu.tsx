@@ -124,7 +124,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      target={children.href !== "" ? "_blank" : ""}
+      target="_blank"
       className="text-neutral-700 dark:text-neutral-200 hover:text-black flex justify-between items-center"
     >
       {children}

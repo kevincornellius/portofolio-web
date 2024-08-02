@@ -8,6 +8,7 @@ import { AnimatedSection } from "@/components/ui/animated-reveal";
 import Experiences from "./components/Experiences";
 import Achievement from "./components/Achievement";
 import Contacts from "./components/Contacts";
+import Educations from "./components/Educations";
 
 function page() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -15,12 +16,14 @@ function page() {
   const experiencesRef = useRef<HTMLDivElement>(null);
   const achievementRef = useRef<HTMLDivElement>(null);
   const contactsRef = useRef<HTMLDivElement>(null);
+  const educationsRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (section: string) => {
     const refMap: { [key: string]: React.RefObject<HTMLDivElement> } = {
       about: aboutRef,
       projects: projectsRef,
       experiences: experiencesRef,
+      education: educationsRef,
       achievement: achievementRef,
       contacts: contactsRef,
     };
@@ -41,7 +44,7 @@ function page() {
             {/*Content is here> */}
 
             <AnimatedSection>
-              <div id="abt" ref={aboutRef}>
+              <div ref={aboutRef}>
                 <About />
               </div>
             </AnimatedSection>
@@ -52,6 +55,9 @@ function page() {
 
             <div ref={experiencesRef}>
               <Experiences />
+            </div>
+            <div ref={educationsRef}>
+              <Educations />
             </div>
 
             <div ref={achievementRef}>

@@ -101,12 +101,30 @@ function Navbar({
           onClick={() => onSectionClick("about")}
         >
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="#abt" onClick={() => onSectionClick("about")}>
+            <div
+              className="cursor-pointer"
+              onClick={() => onSectionClick("about")}
+            >
               About Me
-            </HoveredLink>
-            <HoveredLink href="/interface-design">Experiences</HoveredLink>
-            <HoveredLink href="/seo">Education</HoveredLink>
-            <HoveredLink href="/branding">Achievement</HoveredLink>
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => onSectionClick("experiences")}
+            >
+              Experiences
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => onSectionClick("education")}
+            >
+              Education
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => onSectionClick("achievement")}
+            >
+              Achievement
+            </div>
           </div>
         </MenuItem>
       </Menu>
