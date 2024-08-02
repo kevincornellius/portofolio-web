@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -9,22 +10,57 @@ import Achievement from "./components/Achievement";
 import Contacts from "./components/Contacts";
 
 function page() {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const experiencesRef = useRef<HTMLDivElement>(null);
+  const achievementRef = useRef<HTMLDivElement>(null);
+  const contactsRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = (section: string) => {
+    const refMap: { [key: string]: React.RefObject<HTMLDivElement> } = {
+      about: aboutRef,
+      projects: projectsRef,
+      experiences: experiencesRef,
+      achievement: achievementRef,
+      contacts: contactsRef,
+    };
+
+    const ref = refMap[section]?.current;
+    if (ref) {
+      const offset = 180;
+      const top = ref.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
   return (
     <div className=" min-h-screen dark:bg-black bg-white overflow-hidden  dark:bg-grid-white/[0.05] bg-grid-black/[0.05]">
       <div className=" max-w-xs sm:max-w-sm mx-auto xl:max-w-5xl lg:max-w-3xl   ">
-        <Navbar />
+        <Navbar onSectionClick={scrollToSection} />
         <TracingBeam className="">
           <div className="pt-40 max-w-7xl ">
             {/*Content is here> */}
 
             <AnimatedSection>
-              <About />
+              <div id="abt" ref={aboutRef}>
+                <About />
+              </div>
             </AnimatedSection>
 
-            <Projects />
-            <Experiences />
-            <Achievement />
-            <Contacts />
+            <div ref={projectsRef}>
+              <Projects />
+            </div>
+
+            <div ref={experiencesRef}>
+              <Experiences />
+            </div>
+
+            <div ref={achievementRef}>
+              <Achievement />
+            </div>
+
+            <div ref={contactsRef}>
+              <Contacts />
+            </div>
           </div>
         </TracingBeam>
       </div>

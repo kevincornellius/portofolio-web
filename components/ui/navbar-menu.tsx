@@ -18,17 +18,24 @@ export const MenuItem = ({
   active,
   item,
   children,
+  onClick,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }) => {
+  const handleClick = () => {
+    setActive(item);
+    if (onClick) onClick();
+  };
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer  text-sm sm:text-lg text-black hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:z-0	 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-amber-300 before:absolute before:left-0 before:-bottom-2 dark:text-white font-bold"
+        onClick={handleClick}
       >
         {item}
       </motion.p>
@@ -91,7 +98,7 @@ export const ProductItem = ({
   return (
     <Link
       href={href}
-      target="_blank"
+      target={href !== "" ? "_blank" : undefined}
       className=" flex flex-col sm:flex-row space-x-2"
     >
       <Image
@@ -117,7 +124,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      target="_blank"
+      target={children.href !== "" ? "_blank" : ""}
       className="text-neutral-700 dark:text-neutral-200 hover:text-black flex justify-between items-center"
     >
       {children}

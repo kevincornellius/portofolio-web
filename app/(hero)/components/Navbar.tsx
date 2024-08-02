@@ -25,7 +25,11 @@ import { FaDiscord } from "react-icons/fa";
 //   );
 // }
 
-function Navbar() {
+function Navbar({
+  onSectionClick,
+}: {
+  onSectionClick: (section: string) => void;
+}) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
@@ -39,6 +43,7 @@ function Navbar() {
             setActive={setActive}
             active={active}
             item="Kevin Cornellius"
+            onClick={() => onSectionClick("contacts")}
           >
             <div className="flex flex-col space-y-4 text-sm items-start">
               <HoveredLink href="https://www.instagram.com/kevin_cornelliuss/">
@@ -68,7 +73,12 @@ function Navbar() {
             </div>
           </MenuItem>
         </div>
-        <MenuItem setActive={setActive} active={active} item="Projects">
+        <MenuItem
+          setActive={setActive}
+          active={active}
+          item="Projects"
+          onClick={() => onSectionClick("projects")}
+        >
           <div className="  grid grid-cols-1 gap-10 p-4)">
             <ProductItem
               title="Beauty Frontend Landing Page"
@@ -84,9 +94,16 @@ function Navbar() {
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="About">
+        <MenuItem
+          setActive={setActive}
+          active={active}
+          item="About"
+          onClick={() => onSectionClick("about")}
+        >
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">About Me</HoveredLink>
+            <HoveredLink href="#abt" onClick={() => onSectionClick("about")}>
+              About Me
+            </HoveredLink>
             <HoveredLink href="/interface-design">Experiences</HoveredLink>
             <HoveredLink href="/seo">Education</HoveredLink>
             <HoveredLink href="/branding">Achievement</HoveredLink>
