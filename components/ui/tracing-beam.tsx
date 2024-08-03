@@ -49,7 +49,7 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full max-w-4xl mx-auto", className)}
+      className={cn("relative w-full max-w-4xl h-full mx-auto", className)}
     >
       <div className="absolute hidden sm:block -left-20 top-3 mt-20">
         <motion.div
@@ -82,7 +82,7 @@ export const TracingBeam = ({
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
-          height={svgHeight} // Set the SVG height
+          height={svgHeight * 1} // Set the SVG height
           className=" ml-4 block"
           aria-hidden="true"
         >

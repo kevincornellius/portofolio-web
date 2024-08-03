@@ -27,7 +27,7 @@ function Achievement() {
             }
             className=" cursor-pointer hover:border-amber-100  flex flex-col justify-center text-center  items-center gap-6 h-60 mx-2 my-2 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
           >
-            <img src={osnLogo.src} alt="" className="w-20" />
+            <img draggable="false" src={osnLogo.src} alt="" className="w-20" />
             <div className="flex-col items-center justify-center">
               <h2 className="font-black text-sm sm:text-md">
                 Medali Perunggu Olimpiade Sains Nasional Informatika 2024
@@ -50,7 +50,7 @@ function Achievement() {
             }
             className="cursor-pointer hover:border-amber-100  flex flex-col justify-center text-center items-center gap-6   h-60 mx-2 my-2 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
           >
-            <img src={unpar.src} alt="" className="w-20" />
+            <img draggable="false" src={unpar.src} alt="" className="w-20" />
             <div className="flex-col items-center justify-center">
               <h2 className="font-black text-sm sm:text-md">
                 3rd Place CHIPS 2022
@@ -71,7 +71,7 @@ function Achievement() {
             }
             className="cursor-pointer hover:border-amber-100  flex flex-col justify-center text-center items-center gap-6  h-60 mx-2 my-2 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
           >
-            <img src={bnpchs.src} alt="" className="w-20" />
+            <img draggable="false" src={bnpchs.src} alt="" className="w-20" />
             <div className="flex-col items-center justify-center">
               <h2 className="font-black text-sm sm:text-md">
                 Finalis BNPCHS 2023
@@ -87,7 +87,7 @@ function Achievement() {
             onClick={() => window.open("https://schematics-its.com/", "_blank")}
             className="cursor-pointer hover:border-amber-100  flex flex-col justify-center text-center items-center gap-6  h-60 mx-2 my-2 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
           >
-            <img src={schem.src} alt="" className="w-20" />
+            <img draggable="false" src={schem.src} alt="" className="w-20" />
             <div className="flex-col items-center justify-center">
               <h2 className="font-black text-sm sm:text-md">
                 Finalis Schematics 2023
@@ -108,7 +108,7 @@ function Achievement() {
             }
             className="cursor-pointer hover:border-amber-100  flex flex-col justify-center text-center items-center gap-6  h-60 mx-2 my-2 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
           >
-            <img src={toki.src} alt="" className="w-20" />
+            <img draggable="false" src={toki.src} alt="" className="w-20" />
             <div className="flex-col items-center justify-center">
               <h2 className="font-black text-sm sm:text-md">
                 National Training Stage 2 for IOI

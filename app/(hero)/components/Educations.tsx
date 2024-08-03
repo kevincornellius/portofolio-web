@@ -6,7 +6,7 @@ function Educations() {
   return (
     <div>
       <AnimatedSection>
-        <h1 className="font-black text-3xl sm:text-4xl underline underline-offset-4 decoration-amber-300 my-16 mt-32">
+        <h1 className="font-black text-3xl sm:text-4xl underline underline-offset-4 decoration-amber-300 my-16 ">
           My Education
         </h1>
       </AnimatedSection>
@@ -16,7 +16,7 @@ function Educations() {
             onClick={() => window.open("https://www.ui.ac.id/", "_blank")}
             className=" cursor-pointer hover:border-amber-100  flex flex-col lg:flex-row justify-start items-center gap-6 w-full bg-white border-4 border-amber-300 px-16 py-8 my-4 rounded-3xl"
           >
-            <img src={logoUI.src} alt="" className="w-20" />
+            <img draggable="false" src={logoUI.src} alt="" className="w-20" />
             <div>
               <h2 className="font-black text-md sm:text-xl">
                 Universitas Indonesia
@@ -34,7 +34,12 @@ function Educations() {
             }
             className=" cursor-pointer hover:border-amber-100  flex flex-col lg:flex-row justify-start items-center gap-6 w-full my-4 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
           >
-            <img src={logoRICCI.src} alt="" className="w-20" />
+            <img
+              draggable="false"
+              src={logoRICCI.src}
+              alt=""
+              className="w-20"
+            />
             <div className="flex-col items-center justify-center">
               <h2 className="font-black text-md sm:text-xl">
                 SMA Katolik RICCI 1

@@ -6,7 +6,7 @@ import logoTOKI from "../../../components/assets/Toki.jpg";
 import { AnimatedSection } from "@/components/ui/animated-reveal";
 function Experiences() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-full">
       <AnimatedSection>
         <h1 className="font-black text-3xl sm:text-4xl underline underline-offset-4 decoration-amber-300 my-12">
           My Experiences
@@ -22,7 +22,12 @@ function Experiences() {
               }
               className=" cursor-pointer hover:border-amber-100  flex flex-col lg:flex-row justify-start items-center gap-6 w-full bg-white border-4 border-amber-300 px-16 py-8 my-4 rounded-3xl"
             >
-              <img src={logoPPSN.src} alt="" className="w-20" />
+              <img
+                draggable="false"
+                src={logoPPSN.src}
+                alt=""
+                className="w-20"
+              />
               <div>
                 <h2 className="font-black text-md sm:text-xl">
                   Competitive Programming Problemsetting
@@ -43,7 +48,12 @@ function Experiences() {
               onClick={() => window.open("https://alumni.toki.id/", "_blank")}
               className=" cursor-pointer hover:border-amber-100  flex flex-col lg:flex-row justify-start items-center gap-6 w-full my-4 bg-white border-4 border-amber-300 px-16 py-8 rounded-3xl"
             >
-              <img src={logoTOKI.src} alt="" className="w-20" />
+              <img
+                draggable="false"
+                src={logoTOKI.src}
+                alt=""
+                className="w-20"
+              />
               <div>
                 <h2 className="font-black text-md sm:text-xl">
                   Competitive Programming Olympiad Preparation Supervising

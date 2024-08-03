@@ -1,14 +1,10 @@
 import { FlipWords } from "@/components/ui/flip-words";
 import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import PatrickStar from "../../../components/assets/patrick-star.jpg";
 
 function About() {
   const words = [
     "Software Engineer",
+    "Graphic Designer",
     "Competitive Programmer",
     "Problem Solver",
     "Fullstack Developer",
@@ -16,7 +12,7 @@ function About() {
     "Web Developer",
   ];
   return (
-    <div className="min-h-full  mb-32">
+    <div className="min-h-full mt-24 mb-32">
       <h1 className="font-black text-4xl sm:text-7xl">Kevin Cornellius</h1>
       <FlipWords
         className="font-medium text-xl sm:text-4xl mt-3"

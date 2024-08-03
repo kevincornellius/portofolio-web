@@ -34,7 +34,7 @@ function Navbar({
   return (
     <div
       className={cn(
-        "fixed top-10 inset-x-0 max-w-sm sm:max-w-lg  mx-auto z-50 border rounded-full flex justify-evenly bg-white"
+        "fixed top-10 inset-x-0 max-w-sm sm:max-w-lg  mx-auto z-50 border border-amber-300 rounded-full flex justify-evenly bg-white"
       )}
     >
       <Menu setActive={setActive}>
@@ -81,7 +81,7 @@ function Navbar({
         >
           <div className="  grid grid-cols-1 gap-10 p-4)">
             <ProductItem
-              title="Beauty Frontend Landing Page"
+              title="Beauty Landing Page"
               href="https://beauty-website-demo.web.app/"
               src={beautyWeb.src}
               description=" Made With React Javascript"
