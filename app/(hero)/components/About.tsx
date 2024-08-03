@@ -31,7 +31,7 @@ function About() {
           rel="noopener noreferrer"
         >
           competitive programming
-        </a>{" "}
+        </a>
         and always like learning new things. Whether it's making websites,
         designing visuals, or creating games, I love turning ideas into reality
         with technology and creativity.

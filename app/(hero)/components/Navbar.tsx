@@ -26,9 +26,9 @@ import { FaDiscord } from "react-icons/fa";
 // }
 
 function Navbar({
-  onSectionClick,
+  OnSectionClick,
 }: {
-  onSectionClick: (section: string) => void;
+  OnSectionClick: (section: string) => void;
 }) {
   const [active, setActive] = useState<string | null>(null);
   return (
@@ -43,7 +43,7 @@ function Navbar({
             setActive={setActive}
             active={active}
             item="Kevin Cornellius"
-            onClick={() => onSectionClick("contacts")}
+            onClick={() => OnSectionClick("contacts")}
           >
             <div className="flex flex-col space-y-4 text-sm items-start">
               <HoveredLink href="https://www.instagram.com/kevin_cornelliuss/">
@@ -77,7 +77,7 @@ function Navbar({
           setActive={setActive}
           active={active}
           item="Projects"
-          onClick={() => onSectionClick("projects")}
+          onClick={() => OnSectionClick("projects")}
         >
           <div className="  grid grid-cols-1 gap-10 p-4)">
             <ProductItem
@@ -98,30 +98,30 @@ function Navbar({
           setActive={setActive}
           active={active}
           item="About"
-          onClick={() => onSectionClick("about")}
+          onClick={() => OnSectionClick("about")}
         >
           <div className="flex flex-col space-y-4 text-sm">
             <div
               className="cursor-pointer"
-              onClick={() => onSectionClick("about")}
+              onClick={() => OnSectionClick("about")}
             >
               About Me
             </div>
             <div
               className="cursor-pointer"
-              onClick={() => onSectionClick("experiences")}
+              onClick={() => OnSectionClick("experiences")}
             >
               Experiences
             </div>
             <div
               className="cursor-pointer"
-              onClick={() => onSectionClick("education")}
+              onClick={() => OnSectionClick("education")}
             >
               Education
             </div>
             <div
               className="cursor-pointer"
-              onClick={() => onSectionClick("achievement")}
+              onClick={() => OnSectionClick("achievement")}
             >
               Achievement
             </div>

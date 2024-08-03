@@ -11,27 +11,27 @@ import Contacts from "./components/Contacts";
 import Educations from "./components/Educations";
 
 function page() {
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const experiencesRef = useRef<HTMLDivElement>(null);
-  const achievementRef = useRef<HTMLDivElement>(null);
-  const contactsRef = useRef<HTMLDivElement>(null);
-  const educationsRef = useRef<HTMLDivElement>(null);
+  const AboutRef = useRef<HTMLDivElement>(null);
+  const ProjectsRef = useRef<HTMLDivElement>(null);
+  const ExperiencesRef = useRef<HTMLDivElement>(null);
+  const AchievementRef = useRef<HTMLDivElement>(null);
+  const ContactsRef = useRef<HTMLDivElement>(null);
+  const EducationsRef = useRef<HTMLDivElement>(null);
 
-  const scrollToSection = (section: string) => {
-    const refMap: { [key: string]: React.RefObject<HTMLDivElement> } = {
-      about: aboutRef,
-      projects: projectsRef,
-      experiences: experiencesRef,
-      education: educationsRef,
-      achievement: achievementRef,
-      contacts: contactsRef,
+  const ScrollToSection = (section: string) => {
+    const RefMap: { [key: string]: React.RefObject<HTMLDivElement> } = {
+      About: AboutRef,
+      Projects: ProjectsRef,
+      Experiences: ExperiencesRef,
+      Education: EducationsRef,
+      Achievement: AchievementRef,
+      Contacts: ContactsRef,
     };
 
-    const ref = refMap[section]?.current;
-    if (ref) {
+    const Ref = RefMap[section]?.current;
+    if (Ref) {
       const offset = 180;
-      const top = ref.getBoundingClientRect().top + window.scrollY - offset;
+      const top = Ref.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
@@ -39,32 +39,32 @@ function page() {
     <div className=" min-h-screen dark:bg-black bg-white overflow-hidden  dark:bg-grid-white/[0.05] bg-grid-black/[0.05]">
       <div className=" max-w-xs sm:max-w-sm mx-auto xl:max-w-5xl lg:max-w-3xl   ">
         <TracingBeam className="">
-          <Navbar onSectionClick={scrollToSection} />
+          <Navbar OnSectionClick={ScrollToSection} />
           <div className="pt-40 max-w-7xl ">
             {/*Content is here> */}
 
             <AnimatedSection>
-              <div ref={aboutRef}>
+              <div ref={AboutRef}>
                 <About />
               </div>
             </AnimatedSection>
 
-            <div ref={projectsRef}>
+            <div ref={ProjectsRef}>
               <Projects />
             </div>
 
-            <div ref={experiencesRef}>
+            <div ref={ExperiencesRef}>
               <Experiences />
             </div>
-            <div ref={educationsRef}>
+            <div ref={EducationsRef}>
               <Educations />
             </div>
 
-            <div ref={achievementRef}>
+            <div ref={AchievementRef}>
               <Achievement />
             </div>
 
-            <div ref={contactsRef}>
+            <div ref={ContactsRef}>
               <Contacts />
             </div>
           </div>
