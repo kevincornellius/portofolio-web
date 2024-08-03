@@ -43,7 +43,7 @@ function Navbar({
             setActive={setActive}
             active={active}
             item="Kevin Cornellius"
-            onClick={() => OnSectionClick("contacts")}
+            onClick={() => OnSectionClick("Contacts")}
           >
             <div className="flex flex-col space-y-4 text-sm items-start">
               <HoveredLink href="https://www.instagram.com/kevin_cornelliuss/">
@@ -77,7 +77,7 @@ function Navbar({
           setActive={setActive}
           active={active}
           item="Projects"
-          onClick={() => OnSectionClick("projects")}
+          onClick={() => OnSectionClick("Projects")}
         >
           <div className="  grid grid-cols-1 gap-10 p-4)">
             <ProductItem
@@ -98,30 +98,30 @@ function Navbar({
           setActive={setActive}
           active={active}
           item="About"
-          onClick={() => OnSectionClick("about")}
+          onClick={() => OnSectionClick("About")}
         >
           <div className="flex flex-col space-y-4 text-sm">
             <div
               className="cursor-pointer"
-              onClick={() => OnSectionClick("about")}
+              onClick={() => OnSectionClick("About")}
             >
               About Me
             </div>
             <div
               className="cursor-pointer"
-              onClick={() => OnSectionClick("experiences")}
+              onClick={() => OnSectionClick("Experiences")}
             >
               Experiences
             </div>
             <div
               className="cursor-pointer"
-              onClick={() => OnSectionClick("education")}
+              onClick={() => OnSectionClick("Education")}
             >
               Education
             </div>
             <div
               className="cursor-pointer"
-              onClick={() => OnSectionClick("achievement")}
+              onClick={() => OnSectionClick("Achievement")}
             >
               Achievement
             </div>
