@@ -10,7 +10,7 @@ import Achievement from "./components/Achievement";
 import Contacts from "./components/Contacts";
 import Educations from "./components/Educations";
 
-function page() {
+function Page() {
   const AboutRef = useRef<HTMLDivElement>(null);
   const ProjectsRef = useRef<HTMLDivElement>(null);
   const ExperiencesRef = useRef<HTMLDivElement>(null);
@@ -74,4 +74,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
