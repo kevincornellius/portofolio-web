@@ -20,7 +20,7 @@ export const AnimatedSection = ({
         }
       },
       {
-        rootMargin: "-0px 0px 0px 0px", // Adjust margins to trigger slightly before/after entering/leaving
+        rootMargin: "0px 0px 0px 0px", // Adjust margins to trigger slightly before/after entering/leaving
         threshold: 0.3, // Adjust as needed
       }
     );
