@@ -14,7 +14,7 @@ const Popup = ({
 }) => (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75 z-50">
     <div className="bg-white p-6 rounded-md shadow-lg flex flex-col items-center justify-center">
-      <p className="text-lg font-semibold">{message}</p>
+      <p className="text-lg font-semibold text-black">{message}</p>
       <button
         className="mt-4 px-4 py-2 bg-amber-300 text-white rounded-md hover:opacity-70"
         onClick={onClose}
