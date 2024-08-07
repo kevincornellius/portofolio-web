@@ -44,7 +44,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-amber-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-amber-200 dark:bg-amber-300 dark:bg-opacity-80 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -64,7 +64,7 @@ export const HoverEffect = ({
             <CardDescription>{item.description}</CardDescription>
             <CardIcons icons={item.icons} />
             <div className="flex justify-between pt-6 ">
-              <button className=" z-10 px-6 py-2  bg-opacity-0 border-2 border-amber-300 bg-white transition-colors duration-500 ease-in-out hover:bg-amber-300 text-black font-bold rounded-xl  text-xs sm:text-sm">
+              <button className=" z-10 px-6 py-2  bg-opacity-0 border-2 border-amber-300 bg-white dark:bg-black transition-colors duration-500 ease-in-out hover:bg-amber-300 dark:hover:bg-amber-300 text-black dark:text-white font-bold rounded-xl  text-xs sm:text-sm">
                 Demo
               </button>
               <div
@@ -74,7 +74,7 @@ export const HoverEffect = ({
                   e.preventDefault();
                   window.open(item.githubLink, "_blank");
                 }}
-                className=" flex  items-center gap-2 z-10 px-6 py-2 border-2 border-black bg-black transition-colors duration-500 ease-in-out hover:bg-white text-white hover:text-black font-bold rounded-xl text-xs sm:text-sm"
+                className=" flex  items-center gap-2 z-10 px-6 py-2 border-2 border-black dark:border-white dark:bg-white bg-black transition-colors duration-500 ease-in-out hover:bg-white dark:hover:bg-black dark:text-black dark:hover:text-white   text-white hover:text-black font-bold rounded-xl text-xs sm:text-sm"
               >
                 <FaGithub /> <h1>Github Page</h1>
               </div>
@@ -96,7 +96,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white border-2 border-amber-300 group-hover:border-black relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-black border-2 border-amber-300 group-hover:border-black relative z-20",
         className
       )}
     >

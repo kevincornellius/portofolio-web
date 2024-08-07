@@ -63,7 +63,7 @@ export const TracingBeam = ({
                 ? "none"
                 : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
           }}
-          className="ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
+          className="ml-[27px] h-4 w-4 rounded-full border border-netural-200 dark:border-slate-100 shadow-sm flex items-center justify-center"
         >
           <motion.div
             transition={{
@@ -89,7 +89,7 @@ export const TracingBeam = ({
           <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
             fill="none"
-            stroke="#9091A0"
+            className="stroke-[#9091A0] dark:stroke-white"
             strokeOpacity="0.16"
             transition={{
               duration: 10,

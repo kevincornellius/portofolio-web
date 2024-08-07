@@ -36,7 +36,7 @@ function Page() {
     }
   };
   return (
-    <div className=" min-h-screen dark:bg-black bg-white overflow-hidden  dark:bg-grid-white/[0.05] bg-grid-black/[0.05]">
+    <div className=" min-h-screen dark:bg-black bg-white overflow-hidden  dark:bg-grid-white/[0.09] bg-grid-black/[0.05]">
       <div className=" max-w-xs sm:max-w-sm mx-auto xl:max-w-5xl lg:max-w-3xl   ">
         <TracingBeam className="">
           <Navbar OnSectionClick={ScrollToSection} />
@@ -45,7 +45,7 @@ function Page() {
 
             <AnimatedSection>
               <div ref={AboutRef}>
-                <About />
+                <About OnSectionClick={ScrollToSection} />
               </div>
             </AnimatedSection>
 

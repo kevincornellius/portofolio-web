@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>
+      <body className={spaceGrotesk.className + " scrollbar dark:scrolldark"}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

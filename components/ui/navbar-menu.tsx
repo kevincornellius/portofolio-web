@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
 
 const transition = {
   type: "spring",
@@ -34,10 +36,19 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer  text-sm sm:text-lg text-black hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:z-0	 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-amber-300 before:absolute before:left-0 before:-bottom-2 dark:text-white font-bold"
+        className="cursor-pointer  text-sm sm:text-lg text-black dark:text-white font-bold"
         onClick={handleClick}
       >
-        {item}
+        {item === "icon" ? (
+          <span className="flex justify-center mt-0.5 md:mt-1 mr-5">
+            <MdLightMode className="absolute dark:scale-0 scale-100" />
+            <MdDarkMode className="absolute dark:scale-100 scale-0" />
+          </span>
+        ) : (
+          <span className="cursor-pointer text-sm sm:text-lg text-black hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:z-0	 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-amber-300 before:absolute before:left-0 before:-bottom-2 dark:text-white font-bold">
+            {item}
+          </span>
+        )}
       </motion.p>
       {active !== null && (
         <motion.div
@@ -77,7 +88,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full  dark:bg-black  bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
     >
       {children}
     </nav>

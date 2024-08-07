@@ -20,8 +20,8 @@ export const AnimatedSection = ({
         }
       },
       {
-        rootMargin: "0px 0px 0px 0px", // Adjust margins to trigger slightly before/after entering/leaving
-        threshold: 0.3, // Adjust as needed
+        rootMargin: "-20% 0px 0% 0px", // Adjust margins to trigger slightly before/after entering/leaving
+        threshold: Array.from({ length: 11 }, (_, i) => i / 10), // 0.0, 0.1, 0.2, ..., 1.0
       }
     );
 
@@ -39,10 +39,9 @@ export const AnimatedSection = ({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={
-        isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, y: 40, x: 0 }
-      }
+      initial={{ opacity: 0, y: -20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+      exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
       {children}
